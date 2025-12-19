@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Remove Choice Offers",
+  "version": "1.0.1",
+  "description": "Removes package choice items on AliExpress. Runs only on pages with 'aliexpress' in the URL.",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.aliexpress.com/*"], 
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
